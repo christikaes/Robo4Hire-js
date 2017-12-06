@@ -1,0 +1,28 @@
+<html>
+
+    <head>
+        <title>Robo4Hire</title>
+    </head>
+
+    <body>
+        <h1>Robo 4 Hire</h1>
+        <span>Find a robot for every job!</span>
+        <div id="robots"></div>
+        <script>
+            (function () {
+                var tags = ["cleaning", "cooking", "sweeping", "doing homework", "programming"]
+
+                for (var i = 0; i < 50; i++) {
+                    document.getElementById('robots').innerHTML +=
+                        `<div> 
+                            <h3>Robo${i}</h3>
+                            <img src="http://www.robohash.org/${i}" />
+                            <div>${tags[Math.round(Math.random() * 4)]}</div>
+                            <button>Hire Me!</button>
+                        </div>`
+                }
+            })();
+        </script>
+    </body>
+
+</html>
